@@ -1,0 +1,64 @@
+.css-board-container {
+    position: relative;
+}
+
+.css-table {
+    table-layout: fixed;
+    padding: 0;
+    border-collapse: collapse;
+}
+
+.css-font {
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+    height: 90px;
+    width: 90px;
+}
+
+.css-font:hover {
+    background-color: #e9e9e9;
+}
+
+.css-top-bottom {
+    border-bottom: black solid 1px;
+    border-top: black solid 1px;
+}
+
+.css-left-right {
+    border-left: black solid 1px;
+    border-right: black solid 1px;
+}
+
+.css-center {
+    text-align: center;
+}
+
+.css-margin-auto {
+    margin: auto;
+}
+
+.css-turn {
+    font-weight: bold;
+}
+
+.css-game-result-display {
+    display: none;
+    position: absolute;
+    top: 73px;
+    left: 0;
+    width: 100%;
+}
+
+.css-win-title {
+    padding: 25px;
+    background-color: lightgreen;
+    margin-bottom: 5px;
+    opacity: .8;
+}
+
+.css-shadow {
+    -webkit-box-shadow: 3px 3px 5px 2px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow: 3px 3px 5px 2px #ccc;  /* Firefox 3.5 - 3.6 */
+    box-shadow: 3px 3px 5px 2px #ccc;  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}

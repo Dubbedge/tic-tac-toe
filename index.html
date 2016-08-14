@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tic-Tac-Toe</title>
+
+    <!-- ** SCRIPTS ** -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.1.0.min.js"></script>
+    <!-- Bootstrap (latest JS) -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Main JS -->
+    <script src="js/main.min.js"></script>
+
+    <!-- ** CSS ** -->
+    <!-- Bootstrap (latest CSS) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+</head>
+<body>
+    <!-- BOARD -->
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center">Tic-Tac-Toe</h2>
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center css-board-container">
+                <div class="js-game-result-display css-game-result-display">
+                    <div class="css-margin-auto css-win-title css-shadow"><h3><span class="js-win-title"></span></h3></div>
+                    <div class="btn btn-primary css-margin-auto css-shadow js-play-again">
+                        <h3>Play Again</h3>
+                    </div>
+                </div>
+                <h3 class="text-center"><span class="js-turn css-turn"></span>'s Turn</h3>
+                <div class="css-margin-auto">
+                    <table class="css-table"><!-- THIS IS AUTO POPULATED BY BOARD SIZE --></table>
+                </div>
+            </div>
+            <div class="text-center form-group">
+                <label class="col-md-4 control-label">Player 1 (X) Wins <span class="js-x-wins form-control"></span></label>
+                <label class="col-md-4 control-label">Player 2 (O) Wins <span class="js-y-wins form-control"></span></label>
+                <label class="col-md-4 control-label">Draws <span class="js-draws form-control"></span></label>
+            </div>
+            <div class="text-center form-group">
+                <label class="col-md-4 control-label">Total Games <span class="js-total-games form-control"></span></label>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center">
+            <input type="button" class="btn btn-primary js-reset-game" value="Reset All" />
+            <input type="button" class="btn btn-default js-change-board-size" data-toggle="modal" data-target="#saveBoardSizeModal" value="Change Board Size" />
+        </div>
+        <hr>
+    </div>
+
+    <!-- Change Board Size MODAL -->
+    <div class="modal fade" id="saveBoardSizeModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Bord Size</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group text-center">
+                        <label for="board-size" class="control-label">Enter new board size. Example: 3 = 3x3, 4 = 4x4, etc.</label>
+                        <input type="text" id="board-size" class="form-control js-board-size-input text-center" min="3" max="5" maxlength="1" placeholder="3, 4, or 5" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary js-save-board-size">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+</body>
+</html>
