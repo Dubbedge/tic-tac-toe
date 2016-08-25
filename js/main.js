@@ -324,7 +324,7 @@ $(document).ready(function(){
 
         TicTacToe.game.changeBoardSize(size);
 
-        saveBoardSizeModalId.modal("hide")
+        saveBoardSizeModalId.modal("hide");
     });
 
     $("div.modal-body .js-board-size-input").on("keydown", function(){
